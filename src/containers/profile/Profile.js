@@ -39,14 +39,17 @@ export default function Profile() {
   if (
     openSource.display &&
     openSource.showGithubProfile === "true" &&
-    !(typeof prof === "string" || prof instanceof String)
+    Array.isArray(prof) &&
+    prof.length > 0
   ) {
     return (
       <Suspense fallback={renderLoader()}>
-        <GithubProfileCard prof={prof} key={prof.id} />
+        {prof.map(profile => (
+          <GithubProfileCard prof={profile} key={profile.id} />
+        ))}
       </Suspense>
     );
-  } else {
-    return <Contact />;
   }
+  return <Contact />;
+  
 }
