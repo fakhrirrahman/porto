@@ -213,7 +213,7 @@ const achievementSection = {
       title: "Bangkit Academy batch 2",
       subtitle:
         "BANGKIT ACADEMY 2023 BY GOOGLE, GOTO, TRAVELOKA YAYASAN DICODING INDONESIA ",
-      image: require("./assets/images/channels4_profile.jpg"),
+      image: require("./assets/images/image.png"),
       imageAlt: "Google Code-In Logo",
       footerLink: [
         {
